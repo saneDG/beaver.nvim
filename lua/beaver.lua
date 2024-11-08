@@ -28,6 +28,7 @@ local function create_line_autocmd(log_buf)
   })
 end
 
+-- TODO: Ability to close beaver
 function M.setup()
   vim.api.nvim_create_user_command(
     'Beaver',
