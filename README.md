@@ -28,7 +28,8 @@ Add this line to your lazy setup:
 
 ```lua
 {
-    'saneDG/beaver.nvim'
+    'saneDG/beaver.nvim',
+    opts = {}
 }
 ```
 

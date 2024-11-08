@@ -1,7 +1,11 @@
 ---@diagnostic disable: undefined-global
 
+local M = {}
+
 local prev_prewiew_buf = Nil
 
+-- TODO: Toggle preview buffer on command, not automatically after :Beaver
+-- TODO: Enable formatting and syntax hl on preview
 local function create_line_autocmd(log_buf)
   vim.api.nvim_create_autocmd({ "CursorMoved" }, {
     buffer = log_buf,
@@ -18,13 +22,13 @@ local function create_line_autocmd(log_buf)
         split = 'right',
         win = 0
       })
-      vim.api.nvim_buf_set_lines(preview_buf, 0, 1, false, {current_line})
+      vim.api.nvim_buf_set_lines(preview_buf, 0, 1, false, { current_line })
       prev_prewiew_buf = preview_buf
     end
   })
 end
 
-local function beaver()
+function M.setup()
   vim.api.nvim_create_user_command(
     'Beaver',
     function(opts)
@@ -54,4 +58,4 @@ local function beaver()
   )
 end
 
-return beaver
+return M
