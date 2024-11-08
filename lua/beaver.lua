@@ -24,7 +24,7 @@ local function create_line_autocmd(log_buf)
   })
 end
 
-local function setup()
+local function beaver()
   vim.api.nvim_create_user_command(
     'Beaver',
     function(opts)
@@ -54,4 +54,4 @@ local function setup()
   )
 end
 
-return { setup = setup }
+return beaver
