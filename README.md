@@ -1,11 +1,22 @@
-# Beaver.nvim 🦫
+<div align="center">
 
-**Beaver.nvim** is a Neovim plugin for inspecting and previewing log files. This plugin provides an efficient way to view logs directly within Neovim, making it easier to monitor and troubleshoot your application's behavior without leaving the editor.
+# Beaver
+##### **Beaver.nvim** is a Neovim plugin for inspecting and previewing log files.
+
+[![Lua](https://img.shields.io/badge/Lua-blue.svg?style=for-the-badge&logo=lua)](http://www.lua.org)
+[![Neovim](https://img.shields.io/badge/Neovim%200.8+-green.svg?style=for-the-badge&logo=neovim)](https://neovim.io)
+
+# 🦫
+
+</div>
+
+
+Beaver provides an efficient way to view logs directly within Neovim, making it easier to monitor and troubleshoot your application's behavior without leaving the editor.
 
 ## Features
 - Fast and easy log file inspection
-- Command-based interface for quick access
-- Smooth scrolling and navigation through large log files
+- Watches file change and updates log buffer automatically
+- Browse and preview logs within vim
 
 ## Installation
 
