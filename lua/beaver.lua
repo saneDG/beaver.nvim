@@ -1,5 +1,11 @@
 ---@diagnostic disable: undefined-global
 
+-- TODO: Toggle preview buffer on command, not automatically after :Beaver
+-- TODO: Use lsp to syntax highlight and format preview buffer content
+-- TODO: Fix log file editing while file watcher is on.
+--          - Disable watch when in insert or visual mode??
+--          - Create temp file after editing log file?? Somehow handle conflicts.
+
 local M = {}
 
 local function format_json(buffer)
@@ -15,8 +21,6 @@ local function format_json(buffer)
   vim.api.nvim_buf_set_lines(buffer, 0, -1, false, vim.split(formatted, "\n"))
 end
 
--- TODO: Toggle preview buffer on command, not automatically after :Beaver
--- TODO: Enable formatting and syntax hl on preview
 local function create_line_autocmd(log_buf, preview_buf)
   vim.api.nvim_create_autocmd({ "CursorMoved" }, {
     buffer = log_buf,
