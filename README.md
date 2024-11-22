@@ -23,8 +23,6 @@ Beaver provides an efficient way to view logs directly within Neovim, making it 
 
 ## Installation
 
-You can install **Beaver.nvim** with the following plugin managers:
-
 ### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 Add this line to your lazy setup:
