@@ -13,6 +13,9 @@
 
 Beaver provides an efficient way to view logs directly within Neovim, making it easier to monitor and troubleshoot your application's behavior without leaving the editor.
 
+![output1](https://github.com/user-attachments/assets/77bdc679-0555-4c03-8d5b-31ba4b2b9901)
+
+
 ## Features
 - Fast and easy log file inspection
 - Watches file change and updates log buffer automatically
