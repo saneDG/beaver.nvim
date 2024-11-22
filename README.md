@@ -71,7 +71,7 @@ while true; do echo '{"timestamp": "'$(date +%FT%T)'", "level": "WARN", "module"
 
 ## TODO
 - [ ] Start/Stop file watch command
-- [ ] Fix preview if content is not valid json
+- [x] Fix preview if content is not valid json
 - [ ] Use better formatter
 - [ ] Keymaps:
     - [ ] Toggle preview
