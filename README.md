@@ -52,14 +52,14 @@ The line your cursor is on, is printed on preview split. The content on the prev
 
 ## Log file
 
-Intented use of Beaver is to watch file changes and print single log entries on preview split. You should some other tool to print your logs to the log file before so you can use Beaver to preview logs live.
+Intented use of Beaver is to watch file changes and display log entry on preview split. You should some other tool to print your logs to the file you would like to watch with Beaver.
 
 For example you can use [tee](https://www.gnu.org/software/coreutils/manual/html_node/tee-invocation.html) to append log stream stdout to local file
 ```
 your-log-command | tee logfile.log
 ```
 
-Depending on the case you might want to use [pipe](https://www.gnu.org/software/bash/manual/html_node/Pipelines.html) to manipulate the incoming logs somehow. This is outside of the scope of this plugin tho.
+Depending on the case you might want to use [pipe](https://www.gnu.org/software/bash/manual/html_node/Pipelines.html) to manipulate the incoming log stream
 ```
 your-log-stream | remove-debug-logs | tee logfile.log
 ```
