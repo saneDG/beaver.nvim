@@ -46,7 +46,7 @@ This will activate Beaver in the current buffer, allowing you to preview and ins
 
 **Beaver.nvim** can automatically watch for changes in log files, making it ideal for monitoring logs in real-time. This feature allows you to keep an eye on new log entries as they appear, without manually refreshing the file.
 
-The line your cursor is on, is printed on preview split. The content on the preview buffer is formatted and highlighted (Only JSON is supported).
+The line your cursor is on, is displayed on the preview split. The content on the preview buffer is formatted and highlighted (Only JSON is supported).
 
 ## Log file
 
