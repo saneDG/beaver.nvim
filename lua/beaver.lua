@@ -13,7 +13,7 @@ local function format_json(buffer)
   local content = table.concat(lines, "\n")
   local ok, parsed = pcall(vim.json.decode, content)
   if not ok then
-    vim.notify("Invalid JSON in buffer!", vim.log.levels.ERROR)
+    parsed = lines
     return
   end
   local formatted = vim.json.encode(parsed)
