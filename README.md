@@ -16,7 +16,7 @@ Beaver provides an efficient way to view logs directly within Neovim, making it 
 ## Features
 - Fast and easy log file inspection
 - Watches file change and updates log buffer automatically
-- Browse and preview logs within vim
+- Browse and preview logs within neovim
 
 ## Installation
 
