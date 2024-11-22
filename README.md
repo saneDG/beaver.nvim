@@ -52,7 +52,7 @@ The line your cursor is on, is printed on preview split. The content on the prev
 
 ## Log file
 
-Intented use of Beaver is to watch file changes, and print single log entries on preview split. You should some other tool to print your logs to the log file before so you can use Beaver to preview logs live.
+Intented use of Beaver is to watch file changes and print single log entries on preview split. You should some other tool to print your logs to the log file before so you can use Beaver to preview logs live.
 
 For example you can use [tee](https://www.gnu.org/software/coreutils/manual/html_node/tee-invocation.html) to append log stream stdout to local file
 ```
