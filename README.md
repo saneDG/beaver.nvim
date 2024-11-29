@@ -1,19 +1,19 @@
 <div align="center">
 
-# Beaver
-##### **Beaver.nvim** is a Neovim plugin for inspecting and previewing log files.
-
-[![Lua](https://img.shields.io/badge/Lua-blue.svg?style=for-the-badge&logo=lua)](http://www.lua.org)
-[![Neovim](https://img.shields.io/badge/Neovim%200.8+-green.svg?style=for-the-badge&logo=neovim)](https://neovim.io)
-
-# 🦫
+# 🦫 Beaver
+**Beaver.nvim** is a Neovim plugin for watching log files
 
 </div>
 
-
-Beaver provides an efficient way to view logs directly within Neovim, making it easier to monitor and troubleshoot your application's behavior without leaving the editor.
-
 https://github.com/user-attachments/assets/921427f0-1b27-4a01-a5e5-f5e28c0c7e40
+
+## Before you install
+
+There are dedicated GUI and terminal tools for this same purpose.
+
+For me, the main issue with other log tools was that you need to learn new workflow and keymaps. The main goal behind this plugin is to be able to view log files in Neovim therefore being able to use same motions and functionalities that Neovim provides. One of the biggest hitch with other tools was not being able to copy content from log files.
+
+If you don't have specific need to view logs in Neovim, I recommend to check those other tools out. I've listed some of them at the bottom of this README.
 
 ## Features
 - Fast and easy log file inspection
@@ -82,3 +82,7 @@ while true; do echo '{"timestamp": "'$(date +%FT%T)'", "level": "WARN", "module"
 ## Contributing
 
 Feel free to open issues or submit pull requests to improve Beaver.nvim.
+
+## Other terminal log tools (not neovim plugins)
+- [toolong](https://github.com/Textualize/toolong)
+- [lnav](https://lnav.org/)
