@@ -15,6 +15,8 @@ For me, the main issue with other log tools was that you need to learn new workf
 
 If you don't have specific need to view logs in Neovim, I recommend to check those other tools out. I've listed some of them at the bottom of this README.
 
+That being said, if you decide to try the plugin, leave some feedback and share your experience!
+
 ## Features
 - Fast and easy log file inspection
 - Watches file change and updates log buffer automatically
