@@ -11,16 +11,15 @@ https://github.com/user-attachments/assets/921427f0-1b27-4a01-a5e5-f5e28c0c7e40
 
 There are dedicated GUI and terminal tools for this same purpose.
 
-For me, the main issue with other log tools was that you need to learn new workflow and keymaps. The main goal behind this plugin is to be able to view log files in Neovim therefore being able to use same motions and functionalities that Neovim provides. One of the biggest hitch with other tools was not being able to copy content from log files.
+For me, the main issue with other log tools was that you need to learn new workflow and keymaps. For example, with other tools I was not able to yank content from log files or navigate logs with Vim motions. The main goal behind this plugin is to be able to view log files in Neovim, therefore being able to use same motions and functionalities that Neovim provide.
 
 If you don't have specific need to view logs in Neovim, I recommend to check those other tools out. I've listed some of them at the bottom of this README.
 
 That being said, if you decide to try the plugin, leave some feedback and share your experience!
 
 ## Features
-- Fast and easy log file inspection
-- Watches file change and updates log buffer automatically
-- Browse and preview logs within neovim
+- Watch file changes and updates log buffer automatically
+- Browse and preview logs in Neovim
 
 ## Installation
 
@@ -37,7 +36,7 @@ Add this line to your lazy setup:
 
 ## Usage
 
-To start using Beaver.nvim, simply open a log file in Neovim and run the following command:
+To start using Beaver.nvim, simply open a log file in  and run the following command:
 
 ```
 :Beaver
@@ -85,6 +84,6 @@ while true; do echo '{"timestamp": "'$(date +%FT%T)'", "level": "WARN", "module"
 
 Feel free to open issues or submit pull requests to improve Beaver.nvim.
 
-## Other terminal log tools (not neovim plugins)
+## Other terminal log tools (not Neovim plugins)
 - [toolong](https://github.com/Textualize/toolong)
 - [lnav](https://lnav.org/)
