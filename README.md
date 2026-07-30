@@ -36,7 +36,7 @@ Add this line to your lazy setup:
 
 ## Usage
 
-To start using Beaver.nvim, simply open a log file in  and run the following command:
+To start using Beaver.nvim, simply open a log file in Neovim and run the following command:
 
 ```
 :Beaver
@@ -50,7 +50,7 @@ The line your cursor is on, is displayed on the preview split. The content on th
 
 ## Log file
 
-Intented use of Beaver is to watch file changes and display log entry on preview split. You should some other tool to print your logs to the file you would like to watch with Beaver.
+Intended use of Beaver is to watch file changes and display log entry on preview split. You should use some other tool to print your logs to the file you would like to watch with Beaver.
 
 For example you can use [tee](https://www.gnu.org/software/coreutils/manual/html_node/tee-invocation.html) to append log stream stdout to local file
 ```
@@ -77,7 +77,7 @@ while true; do echo '{"timestamp": "'$(date +%FT%T)'", "level": "WARN", "module"
 - [ ] Somehow handle conflicts when log file is being edited while file watcher is on
 
 ???
-- [ ] Allow passing log sream script within the editor
+- [ ] Allow passing log stream script within the editor
 - [ ] Log timestamps
 
 ## Contributing
