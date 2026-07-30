@@ -1,1 +1,1 @@
-print("🦫")
+require('beaver').setup()
