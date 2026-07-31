@@ -28,7 +28,7 @@ local function set_keymaps(bufnr, preview_bufnr)
     end
 
     if vim.api.nvim_buf_is_valid(preview_bufnr) then
-      vim.api.nvim_open_win(preview_bufnr, false, { split = 'right', win = 0 })
+      preview.show(preview_bufnr)
     else
       preview_bufnr = preview.open(bufnr, cfg)
     end
@@ -49,6 +49,10 @@ end
 
 function M.setup(user_opts)
   cfg = config.resolve(user_opts)
+  vim.api.nvim_set_hl(0, 'BeaverSign', { default = true, link = 'DiffAdd' })
+  vim.api.nvim_set_hl(0, 'BeaverDivider', { default = true, link = 'Comment' })
+  vim.api.nvim_set_hl(0, 'BeaverScroll', { default = true, link = 'DiagnosticHint' })
+  vim.api.nvim_set_hl(0, 'BeaverPreviewTitle', { default = true, link = 'Title' })
   vim.api.nvim_create_user_command('Beaver', M._command, {
     nargs = '?',
     desc = 'Beaver log file watcher',

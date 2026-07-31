@@ -45,7 +45,7 @@ local function update_scroll_indicator(bufnr)
 
   vim.api.nvim_buf_set_extmark(bufnr, scroll_namespace, last_visible, 0, {
     virt_text = {
-      { string.format('▼ %d unread below', entry.unread_count), entry.cfg.divider_hl_group },
+      { string.format('▼ %d unread below', entry.unread_count), entry.cfg.scroll_hl_group },
     },
     virt_text_pos = 'right_align',
   })
@@ -63,11 +63,7 @@ local function apply(bufnr)
     return
   end
 
-  local divider = string.format(
-    "─── %d unread logs ─── %s to clear ───",
-    entry.unread_count,
-    entry.cfg.keymaps.clear_marks
-  )
+  local divider = string.format("  ── %d new ──", entry.unread_count)
   entry.divider_extmark_id = vim.api.nvim_buf_set_extmark(bufnr, namespace, entry.new_line_start, 0, {
     id = entry.divider_extmark_id,
     virt_lines = { { { divider, entry.cfg.divider_hl_group } } },

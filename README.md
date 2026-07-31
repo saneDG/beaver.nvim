@@ -37,8 +37,9 @@ Add this to your lazy setup:
   opts = {
     allow_editing = false,
     sign_text = "▎",
-    sign_hl_group = "DiffAdd",
-    divider_hl_group = "Comment",
+    sign_hl_group = "BeaverSign",
+    divider_hl_group = "BeaverDivider",
+    scroll_hl_group = "BeaverScroll",
     poll_interval_ms = 5000,
     mock_interval_ms = 500,
     keymaps = {

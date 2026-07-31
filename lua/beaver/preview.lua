@@ -46,13 +46,25 @@ function M.format(bufnr)
   vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, vim.split(formatted, "\n", { plain = true }))
 end
 
-function M.open(log_bufnr, cfg)
-  local preview_bufnr = vim.api.nvim_create_buf(false, true)
-  vim.api.nvim_buf_set_option(preview_bufnr, "filetype", "json")
-  vim.api.nvim_open_win(preview_bufnr, false, {
+function M.show(bufnr)
+  local winid = vim.api.nvim_open_win(bufnr, false, {
     split = 'right',
     win = 0,
   })
+  vim.wo[winid].number = false
+  vim.wo[winid].relativenumber = false
+  vim.wo[winid].cursorline = false
+  vim.wo[winid].foldenable = false
+  vim.wo[winid].signcolumn = 'no'
+  vim.wo[winid].winfixwidth = true
+  vim.wo[winid].winbar = '%#BeaverPreviewTitle#  Beaver Preview%*'
+  return winid
+end
+
+function M.open(log_bufnr, cfg)
+  local preview_bufnr = vim.api.nvim_create_buf(false, true)
+  vim.api.nvim_buf_set_option(preview_bufnr, "filetype", "json")
+  M.show(preview_bufnr)
 
   vim.api.nvim_create_autocmd('CursorMoved', {
     buffer = log_bufnr,
